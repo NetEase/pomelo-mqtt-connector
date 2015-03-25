@@ -26,6 +26,7 @@ app.configure('all', 'connector', function() {
 * @param   {Boolean} opts.disconnectOnTimeout setup true to disconnect client when timeout default true
 * @param   {String}  opts.publishRoute        mqttConnector publish message route for pomelo message routing like connector.mqttHandler.publish
 * @param   {String}  opts.subscribeRoute      mqttConnector subscribe message route for pomelo message routing like connector.mqttHandler.subscribe
+* @param   {String}  opts.selfDefinedRoute    setup true to enable self-defined pomelo route message
 
 ## License
 
