@@ -11,22 +11,28 @@ var MqttConnector = require('pomelo-mqtt-connector');
 app.configure('all', 'connector', function() {
 	app.set('connectorConfig', {
 		connector: MqttConnector,
-		publishRoute: 'connector.mqttHandler.publish',
-		subscribeRoute: 'connector.mqttHandler.subscribe',
-		encode: MqttConnector.encode
+		useProtobufCompress: true,
+		useRouteCompress: true,
+		useGzipCompress: true,
+		app: app
 	});
 });
 ```
 
 ## Options
 
-* @param   {Boolean} opts.distinctHost        setup to listen to distinctHost
-* @param   {Boolean} opts.timeout             setup connect, message timeout time default 90s
-* @param   {Boolean} opts.setNoDelay          setup tcpNoDelay default true
-* @param   {Boolean} opts.disconnectOnTimeout setup true to disconnect client when timeout default true
-* @param   {String}  opts.publishRoute        mqttConnector publish message route for pomelo message routing like connector.mqttHandler.publish
-* @param   {String}  opts.subscribeRoute      mqttConnector subscribe message route for pomelo message routing like connector.mqttHandler.subscribe
-* @param   {String}  opts.selfDefinedRoute    setup true to enable self-defined pomelo route message
+ * @param   {Number}  port connector           port
+ * @param   {String}  host connector           host
+ * @param   {Object}  opts connector           configuration opts
+ * @param   {Boolean} opts.distinctHost        setup to listen to distinctHost
+ * @param   {Number}  opts.timeout             setup connect, message timeout time default 90s
+ * @param   {Boolean} opts.setNoDelay          setup tcpNoDelay default true
+ * @param   {Boolean} opts.disconnectOnTimeout setup true to disconnect client when timeout default true
+ * @param   {Number}  opts.handshakeTimeout    setup for client handshake timeout
+ * @param   {Number}  opts.gzipCompressSize    setup for gzip compress packet size
+ * @param   {Boolean} opts.useGzipCompress     setup true to enable gzip compress
+ * @param   {Boolean} opts.useRouteCompress    setup true to enable route compress
+ * @param   {Boolean} opts.useProtobufCompress setup true to enable protobuf compress
 
 ## License
 
