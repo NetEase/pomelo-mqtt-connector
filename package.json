@@ -1,11 +1,8 @@
 {
   "name": "pomelo-mqtt-connector",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "pomelo mqtt connector based on mqtt over tcp and ws protocol",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "pomelo",
     "mqtt",
