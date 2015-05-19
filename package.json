@@ -1,6 +1,6 @@
 {
   "name": "pomelo-mqtt-connector",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "pomelo mqtt connector based on mqtt over tcp and ws protocol",
   "main": "index.js",
   "scripts": {
@@ -12,10 +12,12 @@
     "connector"
   ],
   "dependencies": {
-    "ws": "0.7.1",
-    "pomelo-logger": "0.1.7",
     "mqtt-connection": "2.1.1",
-    "websocket-stream": "1.4.0"
+    "pomelo-logger": "0.1.7",
+    "pomelo-protocol": "0.1.x",
+    "websocket-stream": "1.4.0",
+    "ws": "0.7.1",
+    "browserify-zlib": "0.1.4"
   },
   "author": "fantasyni",
   "license": "MIT"
