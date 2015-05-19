@@ -14,7 +14,7 @@
   "dependencies": {
     "mqtt-connection": "2.1.1",
     "pomelo-logger": "0.1.7",
-    "pomelo-protocol": "0.1.x",
+    "pomelo-protocol": "0.1.6",
     "websocket-stream": "1.4.0",
     "ws": "0.7.1",
     "browserify-zlib": "0.1.4"
